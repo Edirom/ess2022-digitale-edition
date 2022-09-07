@@ -1,0 +1,1552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://dme.mozarteum.at/DME/schemata/mei-DME.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://dme.mozarteum.at/DME/schemata/mei-DME.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mei meiversion="3.0.0" xmlns="http://www.music-encoding.org/ns/mei">
+	<meiHead meiversion="3.0.0">
+		<fileDesc>
+			<titleStmt xml:id="fd_titstmt">
+				<title authURI="https://dme.mozarteum.at" authority="KVonline" label="NMA digital" type="unit" xml:id="fd_tit_1" xml:lang="DE">"O du eselhafter Martin (Jakob)". Vierstimmiger Kanon in G, KV 560<rend rend="sup">b</rend>
+				</title>
+				<title authURI="https://dme.mozarteum.at" authority="KVonline" label="NMA digital" type="unit" xml:id="fd_tit_2" xml:lang="EN">"O du eselhafter Martin (Jakob)". Canon for four voices in G, K. 560<rend rend="sup">b</rend>
+				</title>
+				<title type="file" xml:id="fd_tit_3">
+					<ref target="https://dme.mozarteum.at/movi/file/560b/1" targettype="file_location">dmeref_560b-001_6363.xml</ref>
+					<!-- IC20200505: Überprüfen, ob Link funktioniert.  -->
+				</title>
+				<title label="NMA digital" type="subordinate" xml:id="fd_tit_4" xml:lang="EN">A digital edition</title>
+				<author>
+					<persName authURI="https://d-nb.info/gnd/118584596" authority="GND" codedval="118584596" label="MI-PID_39409" role="composer" xml:id="WAM">Wolfgang Amadé Mozart</persName>
+				</author>
+				<respStmt>
+					<resp>NMA reference text prepared by:</resp>
+					<corpName xml:id="NMA-editors">
+						<persName authURI="https://d-nb.info/gnd/116252200" authority="GND" codedval="116252200" label="MI-PID_64325" role="editor" xml:id="AD">Albert Dunning</persName>
+						<persName authURI="https://d-nb.info/gnd/131780239" authority="GND" codedval="131780239" label="MI-PID_59596" role="author Critical Report" xml:id="HMS">Holger M. Stüwe</persName>
+					</corpName>
+				</respStmt>
+				<funder n="1" xml:id="ISM">
+					<corpName authURI="https://d-nb.info/gnd/37019-8" authority="GND" codedval="37019-8">Internationale Stiftung Mozarteum Salzburg</corpName>
+					<address>
+						<addrLine>
+							<settlement authURI="https://www.geonames.org/2766824" authority="GeoNames">Salzburg</settlement>
+						</addrLine>
+						<addrLine>
+							<country>Austria</country>
+						</addrLine>
+					</address>
+				</funder>
+				<funder n="2" xml:id="PHI">
+					<corpName authURI="https://d-nb.info/dnbn/330242865" authority="GND" codedval="330242865">The Packard Humanities Institute</corpName>
+					<address>
+						<addrLine>
+							<settlement authURI="https://www.geonames.org/5368335" authority="GeoNames">Los Altos</settlement>
+						</addrLine>
+						<addrLine>
+							<country>California, USA</country>
+						</addrLine>
+					</address>
+				</funder>
+			</titleStmt>
+			<editionStmt>
+				<edition>
+					<identifier type="version">1.0.0</identifier>
+					<date isodate="2020-05-15" type="release"/>
+				</edition>
+				<respStmt n="1">
+					<resp>Digital remastering by:</resp>
+					<persName analog="#IC" xml:id="ed.p1">Iacopo Cividini</persName>
+				</respStmt>
+				<respStmt n="2">
+					<resp>Proofreading by:</resp>
+					<persName analog="#OS" xml:id="pr.p1">Oleksii Sapov</persName>
+					<persName analog="#ND" xml:id="pr.p2">Norbert Dubowy</persName>
+				</respStmt>
+			</editionStmt>
+			<pubStmt>
+				<publisher>
+					<corpName analog="#ISM"/>
+				</publisher>
+				<respStmt>
+					<corpName label="ISM Research Department" role="sponsor" xml:id="ISM-Research">
+						<persName authURI="https://d-nb.info/gnd/10403128X" authority="GND" codedval="10403128X" label="MI-PID_64597" role="pdr" xml:id="UL">Ulrich Leisinger</persName>
+					</corpName>
+				</respStmt>
+				<availability>
+					<useRestrict label="license">CC BY-NC-SA 4.0</useRestrict>
+				</availability>
+			</pubStmt>
+			<seriesStmt>
+				<title>Digital Interactive Mozart Edition (DIME)</title>
+				<respStmt>
+					<corpName label="Digital Mozart Edition Editorial Office" role="project execution" xml:id="DME-editors">
+						<persName authURI="https://d-nb.info/gnd/1041960638" authority="GND" codedval="1041960638" label="MI-PID_65157" role="rth edt" xml:id="ND">Norbert Dubowy</persName>
+						<persName authURI="https://d-nb.info/gnd/1161430091" authority="GND" codedval="1161430091" label="MI-PID_84342" role="edt mrk" xml:id="MB">Mirijam Beier</persName>
+						<persName authURI="https://d-nb.info/gnd/1083841270" authority="GND" codedval="1083841270" label="MI-PID_84344" role="edt mrk" xml:id="IC">Iacopo Cividini</persName>
+						<persName authURI="https://d-nb.info/gnd/135494575" authority="GND" codedval="135494575" label="MI-PID_84343" role="edt mrk" xml:id="TR">Till Reininghaus</persName>
+						<persName authURI="https://d-nb.info/gnd/1161423672" authority="GND" codedval="1161423672" label="MI-PID_84341" role="edt mrk" xml:id="OS">Oleksii Sapov</persName>
+						<persName authURI="https://d-nb.info/gnd/1061093409" authority="GND" codedval="1061093409" label="MI-PID_27802" role="led dtm" xml:id="FK">Franz Kelnreiter</persName>
+						<persName label="MI-PID_83688" role="dtm" xml:id="FG">Felix Gründer</persName>
+					</corpName>
+				</respStmt>
+			</seriesStmt>
+			<notesStmt>
+				<annot>This is the encoding of K. 560b according to the Neue Mozart-Ausgabe III/10.</annot>
+			</notesStmt>
+			<sourceDesc>
+				<source label="NMA1" n="1" xml:id="source_1">
+					<identifier authURI="https://www.baerenreiter.com" authority="Bärenreiter" type="catalog_number">BA 4566-01</identifier>
+					<titleStmt>
+						<title type="volume">Wolfgang Amadeus Mozart, Neue Ausgabe sämtlicher Werke, Kanons</title>
+						<title type="work">"O du eselhafter Martin (Jakob)"</title>
+						<composer analog="#WAM">Wolfgang Amadeus Mozart</composer>
+						<editor>
+							<persName analog="#AD">Albert Dunning</persName>
+						</editor>
+					</titleStmt>
+					<editionStmt>
+						<edition xml:lang="DE">[Erste Auflage]</edition>
+						<edition xml:lang="EN">[First edition]</edition>
+						<edition xml:id="digital_image">
+							<ref target="https://dme.mozarteum.at/DME/nma/nma_cont.php?vsep=93&amp;gen=1&amp;l=1&amp;p1=49" targettype="website">
+								<repository>NMA Online</repository>
+							</ref>
+						</edition>
+					</editionStmt>
+					<pubStmt>
+						<publisher>
+							<corpName authURI="https://d-nb.info/gnd/2005573-0" authority="GND" codedval="2005573-0" xml:id="BV">Bärenreiter</corpName>
+						</publisher>
+						<pubPlace>Kassel</pubPlace>
+						<date>1974</date>
+					</pubStmt>
+					<seriesStmt>
+						<title label="NMA">Wolfgang Amadeus Mozart, Neue Ausgabe sämtlicher Werke</title>
+						<biblScope label="Lieder, mehrstimmige Gesänge und Kanons" unit="Serie" xml:lang="DE">
+							<num>III</num>
+						</biblScope>
+						<biblScope label="Kanons" unit="Werkgruppe" xml:lang="DE">
+							<num>10</num>
+						</biblScope>
+						<biblScope label="Songs, Vocal Ensembles, and Canons" unit="Series" xml:lang="EN">
+							<num>III</num>
+						</biblScope>
+						<biblScope label="Canons" unit="Group" xml:lang="EN">
+							<num>14b</num>
+						</biblScope>
+						<biblScope label="unit" unit="page">55-61</biblScope>
+					</seriesStmt>
+					<notesStmt>
+						<annot n="1">Mozart, Wolfgang Amadeus. Neue Ausgabe sämtlicher Werke, Serie III, Werkgruppe 10: Kanons. Ed. Albert Dunning. Kassel: Bärenreiter, 1974, p. 55-61.</annot>
+					</notesStmt>
+				</source>
+				<source label="NMA-KB" n="2" xml:id="source_2">
+					<identifier authURI="https://www.baerenreiter.com" authority="Bärenreiter" type="catalog_number">BA 4557-41</identifier>
+					<titleStmt>
+						<title>Wolfgang Amadeus Mozart. Kritische Berichte. Serie III: Lieder, mehrstimmige Gesänge, Kanons, Werkgruppe 10: Kanons.</title>
+						<author analog="#HMS">Holger M. Stüwe</author>
+					</titleStmt>
+					<editionStmt>
+						<edition xml:lang="DE">[Auf Seite b/102 zusammengestellte Berichtigungen und Ergänzungen zum Notenband]</edition>
+						<edition xml:lang="EN">[Corrigenda and addenda to the music edition reported on p. b/102]</edition>
+					</editionStmt>
+					<pubStmt>
+						<publisher analog="#BV">Bärenreiter</publisher>
+						<pubPlace>Kassel</pubPlace>
+						<date>2007</date>
+					</pubStmt>
+					<seriesStmt>
+						<title label="NMA">Wolfgang Amadeus Mozart, Neue Ausgabe sämtlicher Werke</title>
+						<biblScope label="Lieder, mehrstimmige Gesänge und Kanons" unit="Serie" xml:lang="DE">
+							<num>III</num>
+						</biblScope>
+						<biblScope label="Kanons" unit="Werkgruppe" xml:lang="DE">
+							<num>10</num>
+						</biblScope>
+						<biblScope label="Songs, Vocal Ensembles, and Canons" unit="Series" xml:lang="EN">
+							<num>III</num>
+						</biblScope>
+						<biblScope label="Canons" unit="Group" xml:lang="EN">
+							<num>14b</num>
+						</biblScope>
+					</seriesStmt>
+					<notesStmt>
+						<annot n="1">Holger M. Stüwe. Wolfgang Amadeus Mozart, Neue Ausgabe sämtlicher Werke, Kritische Berichte, Serie III, Werkgruppe 10: Kanons. Kassel: Bärenreiter, 2007.</annot>
+					</notesStmt>
+				</source>
+				<source xml:id="peierl" label="the Peierl document"/>
+				<source xml:id="peierl1824" label="the facsimile from 1824"/>
+				<source xml:id="jakob" label="the Jakob document"/>
+				<source xml:id="martin" label="the Martin document"/>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.2.0" xml:id="parseDox2XML.xsl_v0.2.0">
+					<name>parseDox2XML.xsl</name>
+				</application>
+				<application version="0.9.6" xml:id="doxml2mei.xsl_v0.9.6">
+					<name>doxml2mei.xsl</name>
+					<p>This converter is a reasonably large collection of XSLT stylesheets (utilizing XSLT 3.0), developed by <persName authURI="https://d-nb.info/gnd/174032757" authority="GND" codedval="174032757" xml:id="JoKep">Johannes Kepper</persName> (<ref target="https://edirom.de">
+							<corpName authURI="https://d-nb.info/gnd/1095564986" authority="GND" codedval="1095564986">ViFE</corpName>
+						</ref>) on behalf of and assisted by the <ref target="https://mozarteum.at">Salzburg Mozarteum Foundation</ref> staff, with some revisions and extensions by <persName analog="#FK">Franz Kelnreiter</persName>.</p>
+				</application>
+				<application version="2.3.13" xml:id="DOXconvX.xsl_v2.3.13">
+					<name>DOXconvX.xsl</name>
+					<p>This is an extension of the DOX conversion process. Among other corrections it enriches the encoding by the project specific features. Developed by <persName analog="#OS">Oleksii Sapov</persName>.</p>
+				</application>
+			</appInfo>
+			<editorialDecl label="Editor’s Note" xml:lang="EN">
+				<p>This is the encoding of the canon "O du eselhafter Martin (Jakob)", K. 560<rend rend="sup">b</rend>, according to the <rend rend="italic">Neue Mozart-Ausgabe</rend> III/10 (ed. Albert Dunning, 1974). The edition of NMA III/10 is encoded as 'source_1'. Addenda and corrigenda to the volume are reported on page b/102 of the Critical Report (Holger M. Stüwe, 2007) which is listed as 'source_2'. Regarding this piece, however, there are no addenda or corrigenda.</p>
+				<p>The NMA edition is based on Mozart’s autograph (NMA siglum A), which is preserved at the Internationale Stiftung Mozarteum, Salzburg, call number <rend rend="italic">Autogr 560</rend>, as well as the entry in Mozart’s <ref target="https://www.bl.uk/manuscripts/Viewer.aspx?ref=zweig_ms_63_f019r" targettype="website">autograph work catalogue</ref> (NMA siglum A<rend rend="sup">1</rend>) preserved at the British Library, London (call number <rend rend="italic">Zweig MS 63</rend>). For more details see the preface to the printed volume and the Critical Report. </p>
+				<p>Mozart notated the canon in a single line with graphic symbols marking the entries of the voices. Following the NMA, the digital edition offers both, Mozart’s notation as a single part (with consecutive numbering for the voice entries) as well as a resolution in score provided by the editor; both are coded as two &lt;mdiv&gt;. </p>
+				<p>The coding of the musical text is faithful to the aforementioned NMA edition. Some normalizations have been applied; for a full description of the editorial principles see the <ref target="https://dme.mozarteum.at/en/music/edition/#200" targettype="website">Editorial Guidelines of the DME Music Editions</ref>.</p>
+				<p>The present encoding in MEI 3.0.0 (with some minor customizations) is based on a previous encoding in DOX format. The DOX data were gained from optical music recognition (OMR) and proof reading processes developed and carried out by <corpName analog="#PHI">The Packard Humanities Institute</corpName>, Los Altos, CA.</p>
+				<p>For technical reasons, it is possible that some of the original editorial markup not captured by OMR (e.g. small staccato signs) is not represented in the encoded versions.</p>
+				<p>Lacunae may be reported to the <ref target="dme@mozarteum.at" targettype="email">Editorial Office of the DME</ref>.</p>
+				<p>
+					<biblList>
+						<head>
+							<rend fontweight="bold">Bibliography</rend>
+						</head>
+						<bibl>Mozart, Wolfgang Amadeus. <rend fontstyle="italic">Neue Ausgabe sämtlicher Werke, Serie III: Lieder, mehrstimmige Gesänge und Kanons, Werkgruppe 10: Kanons</rend>. Ed. Albert Dunning. Kassel: Bärenreiter, 1974.</bibl>
+						<bibl>Holger M. Stüwe. <rend fontstyle="italic">Wolfgang Amadeus Mozart, Neue Ausgabe sämtlicher Werke, Kritische Berichte, Serie III, Werkgruppe 10: Kanons</rend>. Kassel: Bärenreiter, 2007.</bibl>
+					</biblList>
+				</p>
+				<p>Last revision: <date isodate="2020-05-15"/>
+				</p>
+			</editorialDecl>
+			<projectDesc>
+				<p>The DOX data results from an optical music recognition (OMR) software and proofreading processes developed and realised by <corpName analog="#PHI">The Packard Humanities Institute, Los Altos, CA</corpName>.</p>
+			</projectDesc>
+		</encodingDesc>
+		<workDesc>
+			<work xml:id="ISMIDW6363">
+				<identifier authority="ISM-IDW" type="work" xml:id="idw-6363">6363</identifier>
+				<identifier authority="KVonline" label="KVonline" type="work" xml:id="kv560b">560<rend rend="sup">b</rend>
+				</identifier>
+				<identifier authURI="https://d-nb.info/gnd/300265190" authority="GND" type="work" xml:id="gnd-work">300265190</identifier>
+				<titleStmt>
+					<title type="main" xml:lang="DE">
+						<title>"O du eselhafter Martin (Jakob)". Vierstimmiger Kanon</title>
+						<identifier analog="#KVonline" label="KV">KV 560<rend rend="sup">b</rend>
+						</identifier>
+					</title>
+					<title type="main" xml:lang="EN">
+						<title>"O du eselhafter Martin (Jakob)". Canon for four voices</title>
+						<identifier analog="#KVonline" label="KV">K. 560<rend rend="sup">b</rend>
+						</identifier>
+					</title>
+					<composer analog="#WAM">Wolfgang Amadé Mozart</composer>
+				</titleStmt>
+				<tempo xml:id="tempo"/>
+				<key mode="major" pname="g" sig="1s"/>
+				<meter count="2" sym="cut" unit="2"/>
+				<incip>
+					<incipText>
+						<p>O du eselhafter Martin (Jakob)!</p>
+					</incipText>
+				</incip>
+				<langUsage>
+					<language xml:lang="DE">German</language>
+				</langUsage>
+				<perfMedium>
+					<perfResList analog="marc:048" authURI="https://www.loc.gov/standards/valuelist/marcmusperf.html" authority="marcmusperf">
+						<perfRes codedval="va" label="soprano" n="1" xml:id="vocalVoice_1">Soprano I</perfRes>
+						<perfRes codedval="va" label="soprano" n="2" xml:id="vocalVoice_2">Soprano II</perfRes>
+						<perfRes codedval="va" label="soprano" n="3" xml:id="vocalVoice_3">Soprano III</perfRes>
+						<perfRes codedval="va" label="soprano" n="4" xml:id="vocalVoice_4">Soprano IV</perfRes>
+					</perfResList>
+				</perfMedium>
+				<classification>
+					<termList>
+						<term classcode="#classification_GND">
+							<identifier>4163197-3</identifier>
+							<title>Kanon</title>
+						</term>
+					</termList>
+					<classCode authURI="https://d-nb.info/gnd/4163197-3" authority="GND" xml:id="classification_GND"/>
+				</classification>
+				<expressionList label="NMA_sources">
+					<expression label="autograph" n="1">
+						<biblList>
+							<bibl n="1" xml:id="NMAsource_A">
+								<identifier authority="ISM-IDQ">10925</identifier>
+								<title xml:lang="EN">[without title]</title>
+								<title xml:lang="DE">[ohne Titel]</title>
+								<composer analog="#WAM">Wolfgang Amadé Mozart</composer>
+								<physLoc>
+									<repository>
+										<geogName authURI="https://www.geonames.org/2766818" authority="GeoNames" codedval="2766818">Salzburg</geogName>
+										<corpName>Internationale Stiftung Mozarteum, Bibliotheca Mozartiana</corpName>
+									</repository>
+									<identifier authURI="https://www.rism.info/" authority="RISM" type="library_siglum">A-Sm</identifier>
+									<identifier type="shelfmark">Autogr 560<bibl>
+											<biblScope label="range" unit="folio">1r</biblScope>
+										</bibl>
+									</identifier>
+								</physLoc>
+							</bibl>
+						</biblList>
+					</expression>
+					<expression label="autograph work catalogue" n="2">
+						<biblList>
+							<bibl n="2" xml:id="NMAsource_AEV">
+								<identifier authority="ISM-IDQ">28042</identifier>
+								<title type="main">Verzeichnüß aller meiner Werke</title>
+								<title type="subordinate">8. 4stimmige Canoni.</title>
+								<composer analog="#WAM">Wolfgang Amadé Mozart</composer>
+								<physLoc>
+									<repository>
+										<geogName authURI="https://www.geonames.org/2643743" authority="GeoNames" codedval="2643743">London</geogName>
+										<corpName>The British Library</corpName>
+									</repository>
+									<identifier authURI="https://www.rism.info/" authority="RISM" type="library_siglum">GB-Lbl</identifier>
+									<identifier type="shelfmark">Zweig MS 63<bibl>
+											<biblScope label="range" unit="folio">18v-19r</biblScope>
+										</bibl>
+										<ptr target="https://www.bl.uk/manuscripts/Viewer.aspx?ref=zweig_ms_63_f019r" targettype="website"/>
+									</identifier>
+								</physLoc>
+							</bibl>
+						</biblList>
+					</expression>
+				</expressionList>
+			</work>
+		</workDesc>
+		<revisionDesc>
+			<change isodate="2020-04-15" n="1" resp="#FK">
+				<changeDesc>
+					<p>File converted from Dox to DoxML using <ptr target="#parseDox2XML.xsl_v0.2.0"/>.</p>
+				</changeDesc>
+			</change>
+			<change isodate="2020-04-15" n="2" resp="#JoKep">
+				<changeDesc>
+					<p>File converted from DoxML to MEI using <ptr target="#doxml2mei.xsl_v0.9.6"/>.</p>
+				</changeDesc>
+			</change>
+			<change isodate="2020-05-04" n="3" resp="#MB">
+				<changeDesc>
+					<p>Processed with <ptr target="#DOXconvX.xsl_v2.3.13"/>.</p>
+				</changeDesc>
+			</change>
+			<change isodate="2019-05-07" n="4" resp="#IC">
+				<changeDesc>
+					<p>Revised and updated according to workflow_1.1.</p>
+				</changeDesc>
+			</change>
+			<change isodate="2020-05-11" n="5" resp="#OS">
+				<changeDesc>
+					<p>Proofreading according to workflow_1.2.</p>
+				</changeDesc>
+			</change>
+			<change isodate="2020-05-15" n="6" resp="#ND">
+				<changeDesc>
+					<p>Final review, workflow 1.3</p>
+				</changeDesc>
+			</change>
+			<change isodate="2020-05-15" n="7" resp="#DME-editors">
+				<changeDesc>
+					<p>first release</p>
+				</changeDesc>
+			</change>
+		</revisionDesc>
+	</meiHead>
+	<music meiversion="3.0.0">
+		<facsimile decls="#digital_image">
+			<surface label="55" xml:id="surface_55">
+				<graphic target="page55.tif"/>
+				<zone data="#m1_k560b_001_01" lrx="559" lry="1080" type="measure" ulx="306" uly="214" xml:id="zoneOf_m1_k560b_001_01"/>
+				<zone data="#m2_k560b_001_01" lrx="680" lry="1080" type="measure" ulx="559" uly="214" xml:id="zoneOf_m2_k560b_001_01"/>
+				<zone data="#m3_k560b_001_01" lrx="861" lry="1080" type="measure" ulx="680" uly="214" xml:id="zoneOf_m3_k560b_001_01"/>
+				<zone data="#m4_k560b_001_01" lrx="1049" lry="1080" type="measure" ulx="861" uly="214" xml:id="zoneOf_m4_k560b_001_01"/>
+				<zone data="#m5_k560b_001_01" lrx="489" lry="1205" type="measure" ulx="274" uly="339" xml:id="zoneOf_m5_k560b_001_01"/>
+				<zone data="#m6_k560b_001_01" lrx="653" lry="1205" type="measure" ulx="489" uly="339" xml:id="zoneOf_m6_k560b_001_01"/>
+				<zone data="#m7_k560b_001_01" lrx="814" lry="1205" type="measure" ulx="653" uly="339" xml:id="zoneOf_m7_k560b_001_01"/>
+				<zone data="#m8_k560b_001_01" lrx="1049" lry="1205" type="measure" ulx="814" uly="339" xml:id="zoneOf_m8_k560b_001_01"/>
+				<zone data="#m9_k560b_001_01" lrx="460" lry="1322" type="measure" ulx="275" uly="457" xml:id="zoneOf_m9_k560b_001_01"/>
+				<zone data="#m10_k560b_001_01" lrx="736" lry="1322" type="measure" ulx="460" uly="457" xml:id="zoneOf_m10_k560b_001_01"/>
+				<zone data="#m11_k560b_001_01" lrx="867" lry="1322" type="measure" ulx="736" uly="457" xml:id="zoneOf_m11_k560b_001_01"/>
+				<zone data="#m12_k560b_001_01" lrx="1049" lry="1322" type="measure" ulx="867" uly="457" xml:id="zoneOf_m12_k560b_001_01"/>
+				<zone data="#m13_k560b_001_01" lrx="486" lry="1413" type="measure" ulx="275" uly="547" xml:id="zoneOf_m13_k560b_001_01"/>
+				<zone data="#m14_k560b_001_01" lrx="751" lry="1413" type="measure" ulx="486" uly="547" xml:id="zoneOf_m14_k560b_001_01"/>
+				<zone data="#m15_k560b_001_01" lrx="891" lry="1413" type="measure" ulx="751" uly="547" xml:id="zoneOf_m15_k560b_001_01"/>
+				<zone data="#m16_k560b_001_01" lrx="1049" lry="1413" type="measure" ulx="891" uly="547" xml:id="zoneOf_m16_k560b_001_01"/>
+				<zone data="#m17_k560b_001_01" lrx="602" lry="1544" type="measure" ulx="274" uly="677" xml:id="zoneOf_m17_k560b_001_01"/>
+				<zone data="#m18_k560b_001_01" lrx="819" lry="1544" type="measure" ulx="602" uly="677" xml:id="zoneOf_m18_k560b_001_01"/>
+				<zone data="#m19_k560b_001_01" lrx="1049" lry="1544" type="measure" ulx="819" uly="677" xml:id="zoneOf_m19_k560b_001_01"/>
+				<zone data="#m20_k560b_001_01" lrx="470" lry="1635" type="measure" ulx="275" uly="769" xml:id="zoneOf_m20_k560b_001_01"/>
+				<zone data="#m21_k560b_001_01" lrx="623" lry="1635" type="measure" ulx="470" uly="769" xml:id="zoneOf_m21_k560b_001_01"/>
+				<zone data="#m22_k560b_001_01" lrx="866" lry="1635" type="measure" ulx="623" uly="769" xml:id="zoneOf_m22_k560b_001_01"/>
+				<zone data="#m23_k560b_001_01" lrx="1049" lry="1635" type="measure" ulx="866" uly="769" xml:id="zoneOf_m23_k560b_001_01"/>
+				<zone data="#m24_k560b_001_01" lrx="415" lry="1748" type="measure" ulx="274" uly="882" xml:id="zoneOf_m24_k560b_001_01"/>
+				<zone data="#m25_k560b_001_01" lrx="627" lry="1748" type="measure" ulx="415" uly="882" xml:id="zoneOf_m25_k560b_001_01"/>
+				<zone data="#m26_k560b_001_01" lrx="836" lry="1748" type="measure" ulx="627" uly="882" xml:id="zoneOf_m26_k560b_001_01"/>
+				<zone data="#m27_k560b_001_01" lrx="1049" lry="1748" type="measure" ulx="836" uly="882" xml:id="zoneOf_m27_k560b_001_01"/>
+				<zone data="#m28_k560b_001_01" lrx="509" lry="1835" type="measure" ulx="276" uly="970" xml:id="zoneOf_m28_k560b_001_01"/>
+				<zone data="#m29_k560b_001_01" lrx="642" lry="1835" type="measure" ulx="509" uly="970" xml:id="zoneOf_m29_k560b_001_01"/>
+				<zone data="#m30_k560b_001_01" lrx="773" lry="1835" type="measure" ulx="642" uly="970" xml:id="zoneOf_m30_k560b_001_01"/>
+				<zone data="#m31_k560b_001_01" lrx="933" lry="1835" type="measure" ulx="773" uly="970" xml:id="zoneOf_m31_k560b_001_01"/>
+				<zone data="#m32_k560b_001_01" lrx="1049" lry="1835" type="measure" ulx="933" uly="970" xml:id="zoneOf_m32_k560b_001_01"/>
+			</surface>
+		</facsimile>
+		<body>
+			<mdiv label="Canon" n="1" xml:id="mdiv_560001b_01">
+				<score xml:id="score_560001b_01">
+					<scoreDef key.mode="major" key.pname="g" key.sig="1s" xml:id="scoreDef_01">
+						<meterSig count="2" sym="cut" unit="2" label="supplied"/>
+						<pgFoot xml:id="pgfoot01">
+							<p xml:id="paragraph_01">©2020 by Digital Interactive Mozart Edition, Stiftung Mozarteum Salzburg</p>
+							<p xml:id="paragraph_02">https://dme.mozarteum.at/movi/navigator/560b (v. 1.0.0 / 2020-05-15)</p>
+						</pgFoot>
+						<staffGrp barthru="false" xml:id="staffGrp_01">
+							<staffDef clef.line="2" clef.shape="G" decls="#vocalVoice_1"  lines="5" n="1" xml:id="staffDef_P1_sc01">
+								<label xml:id="label_P1_sc01"/>
+							</staffDef>
+						</staffGrp>
+					</scoreDef>
+					<section xml:id="section_canon">
+						<pb  n="55" xml:id="pb_3312"/>
+						<measure  n="1" xml:id="m1_k560b_001_01">
+							<staff n="1" xml:id="staff_3324">
+								<layer n="1" xml:id="layer_3330">
+									<choice>
+										<orig source="#peierl #peierl1824">
+											<clef line="1" shape="C" xml:id="t63fffe3c-d710-4ef3-a80b-703cd4ddaa99"/>
+										</orig>
+										<reg source="#jakob #martin">
+											<clef line="2" shape="G" xml:id="t4c3234c0-deb9-4a98-9f32-abb623a20538"/>
+										</reg>
+									</choice>
+									<note dots="1"  dur="4" oct="5" pname="d"  xml:id="note_3336">
+										<verse xml:id="verse_3342">
+											<syl xml:id="syl_3348">O</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="5" pname="d"  xml:id="note_3360">
+										<verse xml:id="verse_3366">
+											<syl xml:id="syl_3372">du</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="5" pname="d"  xml:id="note_3384">
+										<verse xml:id="verse_3390">
+											<syl con="d" wordpos="i" xml:id="syl_3396">e</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="5" pname="d"  xml:id="note_3408">
+										<verse xml:id="verse_3414">
+											<syl con="d" wordpos="m" xml:id="syl_3420">sel</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="5" pname="d"  xml:id="note_3432">
+										<verse xml:id="verse_3438">
+											<syl con="d" wordpos="m" xml:id="syl_3444">haf</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="5" pname="d"  xml:id="note_3456">
+										<verse xml:id="verse_3462">
+											<syl wordpos="t" xml:id="syl_3468">ter</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+							<dir  place="above" staff="1" tstamp="1" xml:id="dir_3480">
+								<rend fontstyle="normal" xml:id="rend_3480">1.</rend>
+							</dir>
+						</measure>
+						<measure  n="2" xml:id="m2_k560b_001_01">
+							<staff n="1" xml:id="staff_3498">
+								<layer n="1" xml:id="layer_3504">
+									<note  dur="4" oct="4" pname="b"  xml:id="note_3510">
+										<app>
+											<rdg source="#peierl #peierl1824">
+												<verse n="1">
+													<syl con="d" wordpos="i">Pei</syl>
+												</verse>
+											</rdg>
+											<rdg source="#jakob">
+												<verse n="1">
+													<syl con="d" wordpos="i">Ja</syl>
+												</verse>
+											</rdg>
+											<rdg source="#martin">
+												<verse n="1">
+													<syl con="d" wordpos="i">Mar</syl>
+												</verse>
+											</rdg>
+										</app>
+									</note>
+									<note  dur="4" oct="4" pname="g"  xml:id="note_3534">
+										<app>
+											<rdg source="#peierl #peierl1824">
+												<verse n="1">
+													<syl wordpos="t">erl!</syl>
+												</verse>
+											</rdg>
+											<rdg source="#jakob">
+												<verse n="1">
+													<syl wordpos="t">kob!</syl>
+												</verse>
+											</rdg>
+											<rdg source="#martin">
+												<verse n="1">
+													<syl wordpos="t">tin!</syl>
+												</verse>
+											</rdg>
+										</app>
+									</note>
+									<rest  dur="2"  xml:id="rest_3558"/>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="3" xml:id="m3_k560b_001_01">
+							<staff n="1" xml:id="staff_3570">
+								<layer n="1" xml:id="layer_3576">
+									<note  dur="4" oct="5" pname="d"  xml:id="note_3582">
+										<verse n="1" xml:id="verse_3588a">
+											<syl xml:id="syl_3594a">o</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="5" pname="d"  xml:id="note_3606">
+										<verse n="1" xml:id="verse_3612a">
+											<syl xml:id="syl_3618a">du</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="5" pname="d"  xml:id="note_3630">
+										<app>
+											<rdg source="#peierl #peierl1824">
+												<verse n="1">
+													<syl con="d" wordpos="i">Pei</syl>
+												</verse>
+											</rdg>
+											<rdg source="#jakob">
+												<verse n="1">
+													<syl con="d" wordpos="i">Ja</syl>
+												</verse>
+											</rdg>
+											<rdg source="#martin">
+												<verse n="1">
+													<syl con="d" wordpos="i" xml:id="syl_3642b">Mar</syl>
+												</verse>
+											</rdg>
+										</app>
+									</note>
+									<note  dur="4" oct="5" pname="d"  xml:id="note_3654">
+										<app>
+											<rdg source="#peierl #peierl1824">
+												<verse n="1">
+													<syl con="d" wordpos="m">er</syl>
+												</verse>
+											</rdg>
+											<rdg source="#jakob">
+												<verse n="1">
+													<syl con="d" wordpos="m">ko</syl>
+												</verse>
+											</rdg>
+											<rdg source="#martin">
+												<verse n="1">
+													<syl con="d" wordpos="m">ti</syl>
+												</verse>
+											</rdg>
+										</app>
+									</note>
+									<note  dur="8" oct="5" pname="d"  xml:id="note_3678">
+										<app>
+											<rdg source="#peierl #peierl1824">
+												<verse n="1">
+													<syl con="d" wordpos="m">li</syl>
+												</verse>
+											</rdg>
+											<rdg source="#jakob">
+												<verse n="1">
+													<syl con="d" wordpos="m">bi</syl>
+												</verse>
+											</rdg>
+											<rdg source="#martin">
+												<verse n="1">
+													<syl con="d" wordpos="m">ni</syl>
+												</verse>
+											</rdg>
+										</app>
+									</note>
+									<note  dur="8" oct="5" pname="d"  xml:id="note_3702">
+										<app>
+											<rdg source="#peierl #peierl1824">
+												<verse n="1">
+													<syl wordpos="t">scher</syl>
+												</verse>
+											</rdg>
+											<rdg source="#jakob">
+												<verse n="1">
+													<syl wordpos="t">scher</syl>
+												</verse>
+											</rdg>
+											<rdg source="#martin">
+												<verse n="2">
+													<syl wordpos="t">scher</syl>
+												</verse>
+											</rdg>
+										</app>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="4" xml:id="m4_k560b_001_01">
+							<staff n="1" xml:id="staff_3732">
+								<layer n="1" xml:id="layer_3738">
+									<note  dur="4" oct="4" pname="b"  xml:id="note_3744">
+										<verse n="1" xml:id="verse_3750a">
+											<syl con="d" wordpos="i" xml:id="syl_3756a">E</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="g"  xml:id="note_3768">
+										<verse n="1" xml:id="verse_3774a">
+											<syl wordpos="t" xml:id="syl_3780a">sel!</syl>
+										</verse>
+									</note>
+									<rest  dur="8"  xml:id="rest_3792"/>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_3798">
+										<verse xml:id="verse_3804">
+											<syl xml:id="syl_3810">du</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_3822">
+										<verse xml:id="verse_3828">
+											<syl xml:id="syl_3834">bist</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_3846">
+										<verse xml:id="verse_3852">
+											<syl xml:id="syl_3858">so</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<sb xml:id="sb_3870"/>
+						<measure  n="5" xml:id="m5_k560b_001_01">
+							<staff n="1" xml:id="staff_3882">
+								<layer n="1" xml:id="layer_3888">
+									<note  dur="2" oct="5" pname="e"  xml:id="note_3894">
+										<verse xml:id="verse_3900">
+											<syl xml:id="syl_3906">faul</syl>
+										</verse>
+									</note>
+									<rest  dur="8"  xml:id="rest_3918"/>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_3924">
+										<verse xml:id="verse_3930">
+											<syl xml:id="syl_3936">als</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_3948">
+										<verse xml:id="verse_3954">
+											<syl xml:id="syl_3960">wie</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_3972">
+										<verse xml:id="verse_3978">
+											<syl xml:id="syl_3984">ein</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="6" xml:id="m6_k560b_001_01">
+							<staff n="1" xml:id="staff_4002">
+								<layer n="1" xml:id="layer_4008">
+									<note  dur="2" oct="5" pname="d"  xml:id="note_4014">
+										<verse xml:id="verse_4020">
+											<syl xml:id="syl_4026">Gaul,</syl>
+										</verse>
+									</note>
+									<rest  dur="8"  xml:id="rest_4038"/>
+									<note  dur="8" oct="4" pname="b"  xml:id="note_4044">
+										<verse xml:id="verse_4050">
+											<syl xml:id="syl_4056">der</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="b"  xml:id="note_4068">
+										<verse xml:id="verse_4074">
+											<syl con="d" wordpos="i" xml:id="syl_4080">we</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="b"  xml:id="note_4092">
+										<verse xml:id="verse_4098">
+											<syl wordpos="t" xml:id="syl_4104">der</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="7" xml:id="m7_k560b_001_01">
+							<staff n="1" xml:id="staff_4122">
+								<layer n="1" xml:id="layer_4128">
+									<note  dur="4" oct="4" pname="a"  xml:id="note_4134">
+										<verse xml:id="verse_4140">
+											<syl xml:id="syl_4146">Kopf</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="5" pname="e"  xml:id="note_4158">
+										<verse xml:id="verse_4164">
+											<syl xml:id="syl_4170">noch</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="5" pname="d"  xml:id="note_4182">
+										<verse xml:id="verse_4188">
+											<syl con="d" wordpos="i" xml:id="syl_4194">Ha</syl>
+										</verse>
+									</note>
+									<note accid.ges="s"  dur="4" oct="4" pname="f"  xml:id="note_4206">
+										<verse xml:id="verse_4212">
+											<syl wordpos="t" xml:id="syl_4218">xen</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="8" xml:id="m8_k560b_001_01">
+							<staff n="1" xml:id="staff_4236">
+								<layer n="1" xml:id="layer_4242">
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4248">
+										<verse xml:id="verse_4254">
+											<syl xml:id="syl_4260">hat.</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4272">
+										<verse xml:id="verse_4278">
+											<syl xml:id="syl_4284">Mit</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4296">
+										<verse xml:id="verse_4302">
+											<syl xml:id="syl_4308">dir</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4320">
+										<verse xml:id="verse_4326">
+											<syl xml:id="syl_4332">ist</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4344">
+										<verse xml:id="verse_4350">
+											<syl xml:id="syl_4356">gar</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4368">
+										<verse xml:id="verse_4374">
+											<syl xml:id="syl_4380">nichts</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4392">
+										<verse xml:id="verse_4398">
+											<syl con="d" wordpos="i" xml:id="syl_4404">an</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4416">
+										<verse xml:id="verse_4422">
+											<syl con="d" wordpos="m" xml:id="syl_4428">zu</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<sb xml:id="sb_4440"/>
+						<measure  n="9" xml:id="m9_k560b_001_01">
+							<staff n="1" xml:id="staff_4458">
+								<layer n="1" xml:id="layer_4464">
+									<note accid.ges="s"  dur="4" oct="4" pname="f"  xml:id="note_4470">
+										<verse xml:id="verse_4476">
+											<syl con="d" wordpos="i" xml:id="syl_4482">fan</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="d"  xml:id="note_4494">
+										<verse xml:id="verse_4500">
+											<syl wordpos="t" xml:id="syl_4506">gen;</syl>
+										</verse>
+									</note>
+									<rest  dur="2"  xml:id="rest_4518"/>
+								</layer>
+							</staff>
+							<dir  place="above" staff="1" tstamp="1" xml:id="dir_4524">
+								<rend fontstyle="normal" xml:id="rend_4524">2.</rend>
+							</dir>
+						</measure>
+						<measure  n="10" xml:id="m10_k560b_001_01">
+							<staff n="1" xml:id="staff_4542">
+								<layer n="1" xml:id="layer_4548">
+									<rest  dur="8"  xml:id="rest_4554"/>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4560">
+										<verse xml:id="verse_4566">
+											<syl xml:id="syl_4572">ich</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4584">
+										<verse xml:id="verse_4590">
+											<syl xml:id="syl_4596">seh</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4608">
+										<verse xml:id="verse_4614">
+											<syl xml:id="syl_4620">dich</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4632">
+										<verse xml:id="verse_4638">
+											<syl xml:id="syl_4644">noch</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4656">
+										<verse xml:id="verse_4662">
+											<syl xml:id="syl_4668">am</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4680">
+										<verse xml:id="verse_4686">
+											<syl con="d" wordpos="i" xml:id="syl_4692">Gal</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4704">
+										<verse xml:id="verse_4710">
+											<syl wordpos="t" xml:id="syl_4716">gen</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="11" xml:id="m11_k560b_001_01">
+							<staff n="1" xml:id="staff_4734">
+								<layer n="1" xml:id="layer_4740">
+									<note accid.ges="s"  dur="4" oct="4" pname="f"  xml:id="note_4746">
+										<verse xml:id="verse_4752">
+											<syl con="d" wordpos="i" xml:id="syl_4758">han</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="d"  xml:id="note_4770">
+										<verse xml:id="verse_4776">
+											<syl wordpos="t" xml:id="syl_4782">gen.</syl>
+										</verse>
+									</note>
+									<rest  dur="2"  xml:id="rest_4794"/>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="12" xml:id="m12_k560b_001_01">
+							<staff n="1" xml:id="staff_4806">
+								<layer n="1" xml:id="layer_4812">
+									<rest  dur="8"  xml:id="rest_4818"/>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4824">
+										<verse xml:id="verse_4830">
+											<syl xml:id="syl_4836">Du</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4848">
+										<verse xml:id="verse_4854">
+											<syl con="d" wordpos="i" xml:id="syl_4860">dum</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4872">
+										<verse xml:id="verse_4878">
+											<syl wordpos="t" xml:id="syl_4884">mer</syl>
+										</verse>
+									</note>
+									<note  dur="2" oct="4" pname="b"  xml:id="note_4896">
+										<verse xml:id="verse_4902">
+											<syl xml:id="syl_4908">Paul,</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<sb xml:id="sb_4920"/>
+						<measure  n="13" xml:id="m13_k560b_001_01">
+							<staff n="1" xml:id="staff_4932">
+								<layer n="1" xml:id="layer_4938">
+									<rest  dur="8"  xml:id="rest_4944"/>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4950">
+										<verse xml:id="verse_4956">
+											<syl xml:id="syl_4962">halt</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4974">
+										<verse xml:id="verse_4980">
+											<syl xml:id="syl_4986">du</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_4998">
+										<verse xml:id="verse_5004">
+											<syl xml:id="syl_5010">nur’s</syl>
+										</verse>
+									</note>
+									<note  dur="2" oct="5" pname="c"  xml:id="note_5022">
+										<verse xml:id="verse_5028">
+											<syl xml:id="syl_5034">Maul.</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="14" xml:id="m14_k560b_001_01">
+							<staff n="1" xml:id="staff_5052">
+								<layer n="1" xml:id="layer_5058">
+									<rest  dur="8"  xml:id="rest_5064"/>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_5070">
+										<verse xml:id="verse_5076">
+											<syl xml:id="syl_5082">Ich</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_5094">
+										<verse xml:id="verse_5100">
+											<syl xml:id="syl_5106">scheiß</syl>
+										</verse>
+									</note>
+									<note  dur="16" oct="4" pname="g"  xml:id="note_5118">
+										<verse xml:id="verse_5124">
+											<syl xml:id="syl_5130">dir</syl>
+										</verse>
+									</note>
+									<note  dur="16" oct="4" pname="g"  xml:id="note_5142">
+										<verse xml:id="verse_5148">
+											<syl xml:id="syl_5154">aufs</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="b"  xml:id="note_5166">
+										<verse xml:id="verse_5172">
+											<syl xml:id="syl_5178">Maul,</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_5190">
+										<verse xml:id="verse_5196">
+											<syl xml:id="syl_5202">so</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="e"  xml:id="note_5214">
+										<verse xml:id="verse_5220">
+											<syl xml:id="syl_5226">hoff’</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="d"  xml:id="note_5238">
+										<verse xml:id="verse_5244">
+											<syl xml:id="syl_5250">ich</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="15" xml:id="m15_k560b_001_01">
+							<staff n="1" xml:id="staff_5268">
+								<layer n="1" xml:id="layer_5274">
+									<note  dur="4" oct="4" pname="c"  xml:id="note_5280">
+										<verse xml:id="verse_5286">
+											<syl xml:id="syl_5292">wirst</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="c"  xml:id="note_5304">
+										<verse xml:id="verse_5310">
+											<syl xml:id="syl_5316">doch</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="c"  xml:id="note_5328">
+										<verse xml:id="verse_5334">
+											<syl con="d" wordpos="i" xml:id="syl_5340">er</syl>
+										</verse>
+									</note>
+									<note  dur="2" oct="4" pname="d"  xml:id="note_5352">
+										<verse xml:id="verse_5358">
+											<syl con="d" wordpos="m" xml:id="syl_5364">wa</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="16" xml:id="m16_k560b_001_01">
+							<staff n="1" xml:id="staff_5382">
+								<layer n="1" xml:id="layer_5388">
+									<note  dur="2" oct="4" pname="g"  xml:id="note_5394">
+										<verse xml:id="verse_5400">
+											<syl xml:id="syl_5406">chen.</syl>
+										</verse>
+									</note>
+									<rest  dur="8"  xml:id="rest_5418"/>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_5424">
+										<verse xml:id="verse_5430">
+											<syl xml:id="syl_5436">O</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="a"  xml:id="note_5448">
+										<verse xml:id="verse_5454">
+											<syl con="d" wordpos="i" xml:id="syl_5460">lie</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="b"  xml:id="note_5472">
+										<verse xml:id="verse_5478">
+											<syl wordpos="t" xml:id="syl_5484">ber</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<sb xml:id="sb_5496"/>
+						<measure  n="17" xml:id="m17_k560b_001_01">
+							<staff n="1" xml:id="staff_5508">
+								<layer n="1" xml:id="layer_5514">
+									<note  dur="4" oct="5" pname="c"  xml:id="note_5520">
+										<verse xml:id="verse_5526">
+											<syl con="d" wordpos="i" xml:id="syl_5532">Li</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="5" pname="c"  xml:id="note_5544">
+										<verse xml:id="verse_5550">
+											<syl wordpos="t" xml:id="syl_5556">perl,</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="a"  xml:id="note_5568">
+										<verse xml:id="verse_5574">
+											<syl xml:id="syl_5580">ich</syl>
+										</verse>
+									</note>
+									<note accid.ges="s"  dur="8" oct="4" pname="f"  xml:id="note_5592">
+										<verse xml:id="verse_5598">
+											<syl con="d" wordpos="i" xml:id="syl_5604">bit</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="a"  xml:id="note_5616">
+										<verse xml:id="verse_5622">
+											<syl wordpos="t" xml:id="syl_5628">te</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="d"  xml:id="note_5640">
+										<verse xml:id="verse_5646">
+											<syl xml:id="syl_5652">dich</syl>
+										</verse>
+									</note>
+									<note accid.ges="s"  dur="8" oct="4" pname="f"  xml:id="note_5664">
+										<verse xml:id="verse_5670">
+											<syl xml:id="syl_5676">recht</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+							<dir  place="above" staff="1" tstamp="1" xml:id="dir_5688">
+								<rend fontstyle="normal" xml:id="rend_5688">3.</rend>
+							</dir>
+						</measure>
+						<measure  n="18" xml:id="m18_k560b_001_01">
+							<staff n="1" xml:id="staff_5712">
+								<layer n="1" xml:id="layer_5718">
+									<note  dur="2" oct="4" pname="g"  xml:id="note_5724">
+										<verse xml:id="verse_5730">
+											<syl xml:id="syl_5736">schön,</syl>
+										</verse>
+									</note>
+									<rest  dur="8"  xml:id="rest_5748"/>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_5754">
+										<verse xml:id="verse_5760">
+											<syl xml:id="syl_5766">o</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="a"  xml:id="note_5778">
+										<app>
+											<rdg source="#peierl #jakob #martin">
+												<verse>
+													<syl>leck</syl>
+												</verse>
+											</rdg>
+											<rdg source="#peierl1824">
+												<choice>
+													<orig resp="#WAM">
+														<verse>
+															<syl>leck</syl>
+														</verse>
+													</orig>
+													<reg resp="#GW">
+														<gap/>
+													</reg>
+												</choice>
+											</rdg>
+										</app>
+									</note>
+									<note  dur="8" oct="4" pname="b"  xml:id="note_5802">
+										<app>
+											<rdg source="#peierl #jakob #martin">
+												<verse>
+													<syl>leck</syl>
+												</verse>
+											</rdg>
+											<rdg source="#peierl1824">
+												<choice>
+													<orig resp="#WAM">
+														<verse>
+															<syl>mich</syl>
+														</verse>
+													</orig>
+													<reg resp="#GW">
+														<gap/>
+													</reg>
+												</choice>
+											</rdg>
+										</app>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="19" xml:id="m19_k560b_001_01">
+							<staff n="1" xml:id="staff_5832">
+								<layer n="1" xml:id="layer_5838">
+									<note dots="1"  dur="4" oct="5" pname="c"  xml:id="note_5844">
+										<app>
+											<rdg source="#peierl #jakob #martin">
+												<verse>
+													<syl>leck</syl>
+												</verse>
+											</rdg>
+											<rdg source="#peierl1824">
+												<choice>
+													<orig resp="#WAM">
+														<verse>
+															<syl>doch</syl>
+														</verse>
+													</orig>
+													<reg resp="#GW">
+														<gap/>
+													</reg>
+												</choice>
+											</rdg>
+										</app>
+									</note>
+									<note  dur="8" oct="4" pname="a"  xml:id="note_5868">
+										<app>
+											<rdg source="#peierl #jakob #martin">
+												<verse>
+													<syl>leck</syl>
+												</verse>
+											</rdg>
+											<rdg source="#peierl1824">
+												<choice>
+													<orig resp="#WAM">
+														<verse>
+															<syl con="d" wordpos="i">ge</syl>
+														</verse>
+													</orig>
+													<reg resp="#GW">
+														<gap/>
+													</reg>
+												</choice>
+											</rdg>
+										</app>
+									</note>
+									<beam xml:id="beam_5892">
+										<note accid.ges="s"  dur="8" oct="4" pname="f"  xml:id="note_5898">
+											<app>
+												<rdg source="#peierl #jakob #martin">
+													<verse>
+														<syl>leck</syl>
+													</verse>
+												</rdg>
+												<rdg source="#peierl1824">
+													<choice>
+														<orig resp="#WAM">
+															<verse>
+																<syl wordpos="t">schwind</syl>
+															</verse>
+														</orig>
+														<reg resp="#GW">
+															<gap/>
+														</reg>
+													</choice>
+												</rdg>
+											</app>
+										</note>
+										<note  dur="8" oct="4" pname="a"  xml:id="note_5922"/>
+									</beam>
+									<beam xml:id="beam_5928">
+										<note  dur="8" oct="4" pname="d"  xml:id="note_5934">
+											<app>
+												<rdg source="#peierl #jakob #martin">
+													<verse>
+														<syl>leck</syl>
+													</verse>
+												</rdg>
+												<rdg source="#peierl1824">
+													<choice>
+														<orig resp="#WAM">
+															<verse>
+																<syl con="u">im</syl>
+															</verse>
+														</orig>
+														<reg resp="#GW">
+															<gap/>
+														</reg>
+													</choice>
+												</rdg>
+											</app>
+										</note>
+										<note accid.ges="s"  dur="8" oct="4" pname="f"  xml:id="note_5958"/>
+									</beam>
+								</layer>
+							</staff>
+							<slur endid="#note_5922" staff="1" startid="#note_5898" xml:id="slur_5964"/>
+							<slur endid="#note_5958" staff="1" startid="#note_5934" xml:id="slur_5970"/>
+						</measure>
+						<sb xml:id="sb_5976"/>
+						<measure  n="20" xml:id="m20_k560b_001_01">
+							<staff n="1" xml:id="staff_5988">
+								<layer n="1" xml:id="layer_5994">
+									<note  dur="4" oct="4" pname="g"  xml:id="note_6000">
+										<app>
+											<rdg source="#peierl #jakob #martin">
+												<verse>
+													<syl>leck</syl>
+												</verse>
+											</rdg>
+											<rdg source="#peierl1824">
+												<choice>
+													<orig resp="#WAM">
+														<verse>
+															<syl>Arsch!</syl>
+														</verse>
+													</orig>
+													<reg resp="#GW">
+														<gap/>
+													</reg>
+												</choice>
+											</rdg>
+										</app>
+									</note>
+									<note  dur="4" oct="4" pname="g"  xml:id="note_6024">
+										<app>
+											<rdg source="#peierl #jakob #martin">
+												<verse>
+													<syl>leck</syl>
+												</verse>
+											</rdg>
+											<rdg source="#peierl1824">
+												<choice>
+													<orig resp="#WAM">
+														<verse>
+															<syl>o</syl>
+														</verse>
+													</orig>
+													<reg resp="#GW">
+														<gap/>
+													</reg>
+												</choice>
+											</rdg>
+										</app>
+									</note>
+									<note  dur="2" oct="5" pname="g"  xml:id="note_6048">
+										<app>
+											<rdg source="#peierl #jakob #martin">
+												<verse>
+													<syl>leck</syl>
+												</verse>
+											</rdg>
+											<rdg source="#peierl1824">
+												<choice>
+													<orig resp="#WAM">
+														<verse>
+															<syl con="u">leck,</syl>
+														</verse>
+													</orig>
+													<reg resp="#GW">
+														<gap/>
+													</reg>
+												</choice>
+											</rdg>
+										</app>
+									</note>
+								</layer>
+							</staff>
+							<tie endid="#note_6096" staff="1" startid="#note_6048" xml:id="tie_6072"/>
+						</measure>
+						<measure  n="21" xml:id="m21_k560b_001_01">
+							<staff n="1" xml:id="staff_6084">
+								<layer n="1" xml:id="layer_6090">
+									<note  dur="4" oct="5" pname="g"  xml:id="note_6096"/>
+									<note  dur="4" oct="4" pname="g"  xml:id="note_6102">
+										<verse xml:id="verse_6108">
+											<syl xml:id="syl_6114">o</syl>
+										</verse>
+									</note>
+									<note  dur="2" oct="5" pname="g"  xml:id="note_6126">
+										<verse xml:id="verse_6132">
+											<syl con="u" xml:id="syl_6138">leck,</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+							<tie endid="#note_6174" staff="1" startid="#note_6126" xml:id="tie_6150"/>
+						</measure>
+						<measure  n="22" xml:id="m22_k560b_001_01">
+							<staff n="1" xml:id="staff_6162">
+								<layer n="1" xml:id="layer_6168">
+									<note  dur="4" oct="5" pname="g"  xml:id="note_6174"/>
+									<note  dur="4" oct="4" pname="b"  xml:id="note_6180">
+										<verse xml:id="verse_6186">
+											<syl xml:id="syl_6192">o</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="5" pname="d"  xml:id="note_6204">
+										<verse xml:id="verse_6210">
+											<syl xml:id="syl_6216">leck</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="b"  xml:id="note_6228">
+										<verse xml:id="verse_6234">
+											<syl xml:id="syl_6240">mich</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_6252">
+										<verse xml:id="verse_6258">
+											<syl xml:id="syl_6264">doch</syl>
+										</verse>
+									</note>
+									<note accid.ges="s"  dur="8" oct="4" pname="f"  xml:id="note_6276">
+										<verse xml:id="verse_6282">
+											<syl con="d" wordpos="i" xml:id="syl_6288">ge</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="23" xml:id="m23_k560b_001_01">
+							<staff n="1" xml:id="staff_6306">
+								<layer n="1" xml:id="layer_6312">
+									<note  dur="4" oct="4" pname="e"  xml:id="note_6318">
+										<verse xml:id="verse_6324">
+											<syl xml:id="syl_6330">schwind,</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="5" pname="c"  xml:id="note_6342">
+										<verse xml:id="verse_6348">
+											<syl con="d" wordpos="i" xml:id="syl_6354">ge</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="b"  xml:id="note_6366">
+										<verse xml:id="verse_6372">
+											<syl wordpos="t" xml:id="syl_6378">schwind</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="a"  xml:id="note_6390">
+										<verse xml:id="verse_6396">
+											<syl xml:id="syl_6402">im</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<sb xml:id="sb_6414"/>
+						<measure  n="24" xml:id="m24_k560b_001_01">
+							<staff n="1" xml:id="staff_6426">
+								<layer n="1" xml:id="layer_6432">
+									<note  dur="2" oct="4" pname="g"  xml:id="note_6438">
+										<verse xml:id="verse_6444">
+											<syl xml:id="syl_6450">Arsch.</syl>
+										</verse>
+									</note>
+									<rest  dur="2"  xml:id="rest_6462"/>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="25" xml:id="m25_k560b_001_01">
+							<staff n="1" xml:id="staff_6474">
+								<layer n="1" xml:id="layer_6480">
+									<note  dur="4" oct="4" pname="a"  xml:id="note_6486">
+										<verse xml:id="verse_6492">
+											<syl xml:id="syl_6498">O</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="a"  xml:id="note_6510">
+										<verse xml:id="verse_6516">
+											<syl con="d" wordpos="i" xml:id="syl_6522">lie</syl>
+										</verse>
+									</note>
+									<note  dur="8" oct="4" pname="a"  xml:id="note_6534">
+										<verse xml:id="verse_6540">
+											<syl wordpos="t" xml:id="syl_6546">ber</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="5" pname="c"  xml:id="note_6558">
+										<verse xml:id="verse_6564">
+											<syl xml:id="syl_6570">Freund,</syl>
+										</verse>
+									</note>
+									<rest  dur="8"  xml:id="rest_6582"/>
+									<note  dur="8" oct="4" pname="a"  xml:id="note_6588">
+										<verse xml:id="verse_6594">
+											<syl con="d" wordpos="i" xml:id="syl_6600">ver</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+							<dir  place="above" staff="1" tstamp="1" xml:id="dir_6612">
+								<rend fontstyle="normal" xml:id="rend_6612">4.</rend>
+							</dir>
+						</measure>
+						<measure  n="26" xml:id="m26_k560b_001_01">
+							<staff n="1" xml:id="staff_6630">
+								<layer n="1" xml:id="layer_6636">
+									<note dots="1"  dur="8" oct="4" pname="g"  xml:id="note_6642">
+										<verse xml:id="verse_6648">
+											<syl con="d" wordpos="i" xml:id="syl_6654">zei</syl>
+										</verse>
+									</note>
+									<note  dur="16" oct="4" pname="a"  xml:id="note_6666">
+										<verse xml:id="verse_6672">
+											<syl wordpos="t" xml:id="syl_6678">he</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="b"  xml:id="note_6690">
+										<verse xml:id="verse_6696">
+											<syl xml:id="syl_6702">mir,</syl>
+										</verse>
+									</note>
+									<rest  dur="4"  xml:id="rest_6714"/>
+									<rest  dur="8"  xml:id="rest_6720"/>
+									<note  dur="8" oct="4" pname="g"  xml:id="note_6726">
+										<verse xml:id="verse_6732">
+											<syl xml:id="syl_6738">den</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="27" xml:id="m27_k560b_001_01">
+							<staff n="1" xml:id="staff_6762">
+								<layer n="1" xml:id="layer_6768">
+									<note  dur="4" oct="4" pname="a"  xml:id="note_6774">
+										<verse xml:id="verse_6780">
+											<syl xml:id="syl_6786">Arsch,</syl>
+										</verse>
+									</note>
+									<rest  dur="8"  xml:id="rest_6798"/>
+									<note  dur="8" oct="4" pname="a"  xml:id="note_6804">
+										<verse xml:id="verse_6810">
+											<syl xml:id="syl_6816">den</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="5" pname="c"  xml:id="note_6828">
+										<verse xml:id="verse_6834">
+											<syl xml:id="syl_6840">Arsch</syl>
+										</verse>
+									</note>
+									<rest  dur="8"  xml:id="rest_6852"/>
+									<note  dur="8" oct="4" pname="a"  xml:id="note_6858">
+										<verse xml:id="verse_6864">
+											<syl con="d" wordpos="i" xml:id="syl_6870">pet</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<sb xml:id="sb_6882"/>
+						<measure  n="28" xml:id="m28_k560b_001_01">
+							<staff n="1" xml:id="staff_6894">
+								<layer n="1" xml:id="layer_6900">
+									<note dots="1"  dur="8" oct="4" pname="g"  xml:id="note_6906">
+										<verse xml:id="verse_6912">
+											<syl xml:id="syl_6918">schier</syl>
+										</verse>
+									</note>
+									<note  dur="16" oct="4" pname="a"  xml:id="note_6930">
+										<verse xml:id="verse_6936">
+											<syl xml:id="syl_6942">ich</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="b"  xml:id="note_6954">
+										<verse xml:id="verse_6960">
+											<syl xml:id="syl_6966">dir.</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="5" pname="d"  xml:id="note_6978">
+										<verse xml:id="verse_6984">
+											<syl con="d" wordpos="i" xml:id="syl_6990">Li</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="g"  xml:id="note_7002">
+										<verse xml:id="verse_7008">
+											<syl wordpos="t" xml:id="syl_7014">perl!</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="29" xml:id="m29_k560b_001_01">
+							<staff n="1" xml:id="staff_7032">
+								<layer n="1" xml:id="layer_7038">
+									<rest  dur="2"  xml:id="rest_7044"/>
+									<note  dur="4" oct="5" pname="e"  xml:id="note_7050">
+										<verse n="1" xml:id="verse_7056a">
+											<syl con="d" wordpos="i" xml:id="syl_7062a">Ja</syl>
+										</verse>
+										<verse n="2" xml:id="verse_7056b">
+											<syl con="d" wordpos="i" xml:id="syl_7062b">Mar</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="g"  xml:id="note_7074">
+										<verse n="1" xml:id="verse_7080a">
+											<syl wordpos="t" xml:id="syl_7086a">kob!</syl>
+										</verse>
+										<verse n="2" xml:id="verse_7080b">
+											<syl wordpos="t" xml:id="syl_7086b">tin!</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="30" xml:id="m30_k560b_001_01">
+							<staff n="1" xml:id="staff_7104">
+								<layer n="1" xml:id="layer_7110">
+									<rest  dur="2"  xml:id="rest_7116"/>
+									<note  dur="4" oct="5" pname="d"  xml:id="note_7122">
+										<verse xml:id="verse_7128">
+											<syl con="d" wordpos="i" xml:id="syl_7134">Li</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="g"  xml:id="note_7146">
+										<verse xml:id="verse_7152">
+											<syl wordpos="t" xml:id="syl_7158">perl!</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="31" xml:id="m31_k560b_001_01">
+							<staff n="1" xml:id="staff_7176">
+								<layer n="1" xml:id="layer_7182">
+									<rest  dur="4"  xml:id="rest_7188"/>
+									<note  dur="4" oct="4" pname="a"  xml:id="note_7194">
+										<verse xml:id="verse_7200">
+											<syl con="d" wordpos="i" xml:id="syl_7206">ver</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="4" pname="b"  xml:id="note_7218">
+										<verse xml:id="verse_7224">
+											<syl con="d" wordpos="m" xml:id="syl_7230">zei</syl>
+										</verse>
+									</note>
+									<note  dur="4" oct="5" pname="c"  xml:id="note_7242">
+										<verse xml:id="verse_7248">
+											<syl wordpos="t" xml:id="syl_7254">he</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+						</measure>
+						<measure  n="32" right="end" xml:id="m32_k560b_001_01">
+							<staff n="1" xml:id="staff_7272">
+								<layer n="1" xml:id="layer_7278">
+									<note  dur="2" oct="4" pname="b"  xml:id="note_7284">
+										<verse xml:id="verse_7290">
+											<syl xml:id="syl_7296">mir!</syl>
+										</verse>
+									</note>
+									<rest  dur="2"  xml:id="rest_7308"/>
+								</layer>
+							</staff>
+						</measure>
+					</section>
+				</score>
+			</mdiv>
+			
+		</body>
+	</music>
+</mei>

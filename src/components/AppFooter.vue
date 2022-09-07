@@ -2,6 +2,8 @@
   <footer>
     Github whatever {{ isLightOn }}
     <span @click="toggleTheLight">Klaus</span>
+
+    <span v-if="isLoading" class="isLoading">loading data</span>
   </footer>
 </template>
 
@@ -11,6 +13,9 @@ export default {
   computed: {
     isLightOn () {
       return this.$store.getters.isLightOn
+    },
+    isLoading () {
+      return this.$store.getters.isLoading
     }
   },
   methods: {
@@ -32,5 +37,11 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100vw;
+
+  .isLoading {
+    font-weight: bold;
+    color: red;
+    margin-left: 50px;
+  }
 }
 </style>

@@ -37,6 +37,9 @@ export default {
     FacsimileViewer,
     Splitpanes,
     Pane
+  },
+  mounted: function () {
+    this.$store.dispatch('loadMEI')
   }
 }
 </script>
