@@ -6,7 +6,7 @@
         <pane>
           <splitpanes>
             <pane>
-              <span>Facsimile</span>
+              <FacsimileViewer/>
             </pane>
             <pane>
               <span>Transcription</span>
@@ -25,6 +25,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import FacsimileViewer from './components/FacsimileViewer.vue'
 import { Splitpanes, Pane } from 'splitpanes'
 import 'splitpanes/dist/splitpanes.css'
 
@@ -33,6 +34,7 @@ export default {
   components: {
     AppHeader,
     AppFooter,
+    FacsimileViewer,
     Splitpanes,
     Pane
   }
