@@ -1,12 +1,24 @@
 <template>
   <footer>
-    Github whatever
+    Github whatever {{ isLightOn }}
+    <span @click="toggleTheLight">Klaus</span>
   </footer>
 </template>
 
 <script>
 export default {
-  name: 'AppFooter'
+  name: 'AppFooter',
+  computed: {
+    isLightOn () {
+      return this.$store.getters.isLightOn
+    }
+  },
+  methods: {
+    toggleTheLight () {
+      console.log('clicked Klaus')
+      this.$store.dispatch('toggleLights')
+    }
+  }
 }
 </script>
 
@@ -15,7 +27,7 @@ export default {
 @import '@/css/_variables.scss';
 
 footer {
-  background-color: $appBaseColor;
+  background-color: lighten($appBaseColor, 20%);
   height: $appFooterHeight;
   position: absolute;
   bottom: 0;

@@ -1,12 +1,17 @@
 <template>
   <header>
-    ESS2022 Digitale Edition
+    ESS2022 Digitale Edition {{ isLightOn }}
   </header>
 </template>
 
 <script>
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  computed: {
+    isLightOn () {
+      return this.$store.getters.isLightOn
+    }
+  }
 }
 </script>
 
@@ -15,7 +20,7 @@ export default {
 @import '@/css/_variables.scss';
 
 header {
-  background-color: darken($appBaseColor, 20%);
+  background-color: lighten($appBaseColor, 20%);
   height: $appHeaderHeight;
 }
 </style>
