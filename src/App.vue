@@ -2,15 +2,19 @@
   <div>
     <AppHeader/>
     <div class="mainArea">
-      <splitpanes horizontal class="default-theme">
+      <splitpanes class="default-theme" horizontal>
         <pane>
-          <div>Box 1</div>
+          <splitpanes>
+            <pane>
+              <span>Facsimile</span>
+            </pane>
+            <pane>
+              <span>Transcription</span>
+            </pane>
+          </splitpanes>
         </pane>
         <pane>
-          <div>Box 2</div>
-        </pane>
-        <pane>
-          <div>Box 3</div>
+          <span>Annotation</span>
         </pane>
       </splitpanes>
     </div>
