@@ -2,7 +2,17 @@
   <div>
     <AppHeader/>
     <div class="mainArea">
-      Hello Polly
+      <splitpanes horizontal class="default-theme">
+        <pane>
+          <div>Box 1</div>
+        </pane>
+        <pane>
+          <div>Box 2</div>
+        </pane>
+        <pane>
+          <div>Box 3</div>
+        </pane>
+      </splitpanes>
     </div>
     <AppFooter/>
   </div>
@@ -11,12 +21,16 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import { Splitpanes, Pane } from 'splitpanes'
+import 'splitpanes/dist/splitpanes.css'
 
 export default {
   name: 'App',
   components: {
     AppHeader,
-    AppFooter
+    AppFooter,
+    Splitpanes,
+    Pane
   }
 }
 </script>
