@@ -3,7 +3,7 @@
     <AppHeader/>
     <div class="mainArea">
       <splitpanes class="default-theme" horizontal>
-        <pane>
+        <pane size="70" max-size="80" min-size="60">
           <splitpanes>
             <pane>
               <FacsimileViewer/>
