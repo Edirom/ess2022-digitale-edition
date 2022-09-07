@@ -15,7 +15,7 @@ export default {
 @import '@/css/_variables.scss';
 
 header {
-  background-color: beige;
+  background-color: darken($appBaseColor, 20%);
   height: $appHeaderHeight;
 }
 </style>

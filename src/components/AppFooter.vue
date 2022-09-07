@@ -15,7 +15,7 @@ export default {
 @import '@/css/_variables.scss';
 
 footer {
-  background-color: beige;
+  background-color: $appBaseColor;
   height: $appFooterHeight;
   position: absolute;
   bottom: 0;

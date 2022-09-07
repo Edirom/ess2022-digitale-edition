@@ -41,7 +41,7 @@ body {
 }
 
 .mainArea {
-  background-color: #ffff66;
+  background-color: lighten($appBaseColor, 20%);
   height: calc(100vh - $appHeaderHeight - $appFooterHeight);
 }
 </style>
