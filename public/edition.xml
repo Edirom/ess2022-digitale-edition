@@ -458,17 +458,17 @@
 								<layer n="1" xml:id="layer_3504">
 									<note  dur="4" oct="4" pname="b"  xml:id="note_3510">
 										<app>
-											<rdg source="#peierl #peierl1824">
+											<rdg xml:id="rdg1" source="#peierl #peierl1824">
 												<verse n="1">
 													<syl con="d" wordpos="i">Pei</syl>
 												</verse>
 											</rdg>
-											<rdg source="#jakob">
+											<rdg xml:id="rdg2" source="#jakob">
 												<verse n="1">
 													<syl con="d" wordpos="i">Ja</syl>
 												</verse>
 											</rdg>
-											<rdg source="#martin">
+											<rdg xml:id="rdg3" source="#martin">
 												<verse n="1">
 													<syl con="d" wordpos="i">Mar</syl>
 												</verse>
