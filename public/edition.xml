@@ -581,7 +581,7 @@
 												</verse>
 											</rdg>
 											<rdg source="#martin">
-												<verse n="2">
+												<verse n="1">
 													<syl wordpos="t">scher</syl>
 												</verse>
 											</rdg>
@@ -1546,7 +1546,7 @@
 					</section>
 				</score>
 			</mdiv>
-			
+
 		</body>
 	</music>
 </mei>
