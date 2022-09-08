@@ -9,7 +9,7 @@
               <FacsimileViewer/>
             </pane>
             <pane>
-              <span>Transcription</span>
+              <VerovioViewer/>
             </pane>
           </splitpanes>
         </pane>
@@ -23,9 +23,10 @@
 </template>
 
 <script>
-import AppHeader from './components/AppHeader.vue'
-import AppFooter from './components/AppFooter.vue'
-import FacsimileViewer from './components/FacsimileViewer.vue'
+import AppHeader from '@/components/AppHeader.vue'
+import AppFooter from '@/components/AppFooter.vue'
+import FacsimileViewer from '@/components/FacsimileViewer.vue'
+import VerovioViewer from '@/components/VerovioViewer.vue'
 import { Splitpanes, Pane } from 'splitpanes'
 import 'splitpanes/dist/splitpanes.css'
 
@@ -35,6 +36,7 @@ export default {
     AppHeader,
     AppFooter,
     FacsimileViewer,
+    VerovioViewer,
     Splitpanes,
     Pane
   },

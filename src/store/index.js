@@ -1,9 +1,11 @@
 import { createStore } from 'vuex'
 
+const parser = new DOMParser()
+
 export default createStore({
   state: {
     lightOn: true,
-    mei: 'howDoWeGetItHere?',
+    mei: null,
     loading: false
   },
   mutations: {
@@ -40,6 +42,21 @@ export default createStore({
     },
     isLoading: state => {
       return state.loading
+    },
+    meiLoaded: state => {
+      return state.mei !== null
+    },
+    meiAsText: state => {
+      return state.mei
+    },
+    meiQuestion: state => {
+      if (state.mei === null) {
+        return null
+      }
+      const mei = parser.parseFromString(state.mei, 'application/xml')
+      // const notes = mei.querySelectorAll('rest')
+      const title = mei.querySelector('title').textContent
+      return title
     }
   },
   modules: {
