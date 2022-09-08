@@ -21,7 +21,7 @@ const verovioOptions = {
   svgRemoveXlink: true,
   header: 'none',
   footer: 'none',
-  appXPathQuery: './rdg[contains(@source, "#jakob")]',
+  // appXPathQuery: './rdg[contains(@source, "#jakob")]',
   choiceXPathQuery: './orig',
   svgAdditionalAttribute: [
     'note@pname',
@@ -35,22 +35,47 @@ export default {
   components: {
     SourceSelectionButtons
   },
-  mounted: function () {
-    createVerovioModule().then(VerovioModule => {
-      this.verovioToolkit = new VerovioToolkit(VerovioModule)
-      this.verovioToolkit.setOptions(verovioOptions)
-
-      if (this.$store.getters.meiLoaded) {
-        this.verovioToolkit.loadData(this.$store.getters.meiAsText)
-
-        // attention: down there be dragons!
-        // verovioToolkit.select({ measureRange: '3-5' })
-        // verovioToolkit.redoLayout()
-
-        const svg = this.verovioToolkit.renderToSVG(1, {})
-        document.querySelector('#verovioViewer').innerHTML = svg
+  methods: {
+    renderMEI () {
+      if (!this.$store.getters.meiLoaded || this.verovioToolkit === undefined) {
+        // console.log('cannot render yet')
+        return null
       }
-    })
+
+      const activeSource = this.$store.getters.activeSource
+      const mei = this.$store.getters.meiAsText
+
+      if (activeSource !== null) {
+        // console.log('setting source to ' + this.$store.getters.activeSource)
+        verovioOptions.appXPathQuery = './rdg[contains(@source, "' + activeSource + '")]'
+      }
+
+      this.verovioToolkit.setOptions(verovioOptions)
+      this.verovioToolkit.loadData(mei)
+
+      // attention: down there be dragons!
+      // verovioToolkit.select({ measureRange: '3-5' })
+      // verovioToolkit.redoLayout()
+      // document.querySelector('#verovioViewer').innerHTML = 'nope'
+      const svg = this.verovioToolkit.renderToSVG(1, {})
+      document.querySelector('#verovioViewer').innerHTML = svg
+      // console.log(svg)
+      // console.log('done')
+    }
+  },
+  mounted: function () {
+    const setup = VerovioModule => {
+      this.verovioToolkit = new VerovioToolkit(VerovioModule)
+
+      this.renderMEI()
+
+      this.$store.watch((state, getters) => getters.activeSource,
+        (newSource, oldSource) => {
+          this.renderMEI()
+        })
+    }
+
+    createVerovioModule().then(VerovioModule => setup(VerovioModule))
   }
 }
 </script>
