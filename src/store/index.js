@@ -6,7 +6,8 @@ export default createStore({
   state: {
     lightOn: true,
     mei: null,
-    loading: false
+    loading: false,
+    activeSource: null
   },
   mutations: {
     TOGGLE_LIGHTS (state) {
@@ -17,6 +18,9 @@ export default createStore({
     },
     SET_LOADING (state, bool) {
       state.loading = bool
+    },
+    SELECT_SOURCE (state, source) {
+      state.activeSource = source
     }
   },
   actions: {
@@ -34,6 +38,9 @@ export default createStore({
         .catch(err => {
           console.log('we broke it: ' + err)
         })
+    },
+    selectSource ({ commit }, source) {
+      commit('SELECT_SOURCE', source)
     }
   },
   getters: {
@@ -48,6 +55,9 @@ export default createStore({
     },
     meiAsText: state => {
       return state.mei
+    },
+    activeSource: state => {
+      return state.activeSource
     },
     meiQuestion: state => {
       if (state.mei === null) {

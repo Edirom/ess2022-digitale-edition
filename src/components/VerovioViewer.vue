@@ -1,12 +1,16 @@
 <template>
-  <div id="verovioViewer">
-    Hello Laurent
+  <div class="verovioComponent">
+    <SourceSelectionButtons/>
+    <div id="verovioViewer">
+      this will go away automatically as soon as MEI is rendered…
+    </div>
   </div>
 </template>
 
 <script>
 import createVerovioModule from 'verovio/wasm'
 import { VerovioToolkit } from 'verovio/esm'
+import SourceSelectionButtons from '@/components/SourceSelectionButtons.vue'
 
 const verovioOptions = {
   scale: 50,
@@ -22,24 +26,28 @@ const verovioOptions = {
   svgAdditionalAttribute: [
     'note@pname',
     'note@oct'
-  ]
+  ],
+  transpose: '-M2'
 }
 
 export default {
   name: 'VerovioViewer',
+  components: {
+    SourceSelectionButtons
+  },
   mounted: function () {
     createVerovioModule().then(VerovioModule => {
-      const verovioToolkit = new VerovioToolkit(VerovioModule)
-      verovioToolkit.setOptions(verovioOptions)
+      this.verovioToolkit = new VerovioToolkit(VerovioModule)
+      this.verovioToolkit.setOptions(verovioOptions)
 
       if (this.$store.getters.meiLoaded) {
-        verovioToolkit.loadData(this.$store.getters.meiAsText)
+        this.verovioToolkit.loadData(this.$store.getters.meiAsText)
 
         // attention: down there be dragons!
-        verovioToolkit.select({ measureRange: '3-5' })
-        verovioToolkit.redoLayout()
+        // verovioToolkit.select({ measureRange: '3-5' })
+        // verovioToolkit.redoLayout()
 
-        const svg = verovioToolkit.renderToSVG(1, {})
+        const svg = this.verovioToolkit.renderToSVG(1, {})
         document.querySelector('#verovioViewer').innerHTML = svg
       }
     })
@@ -50,9 +58,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import '@/css/_variables.scss';
-#verovioViewer {
+
+.verovioComponent {
   width: 100%;
   height: 100%;
+}
+
+#verovioViewer {
+  width: 100%;
+  height: calc(100% - $sourceSelectionButtonsHeight);
   overflow: auto;
 
   svg {
