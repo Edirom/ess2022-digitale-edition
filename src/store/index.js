@@ -57,6 +57,24 @@ export default createStore({
       // const notes = mei.querySelectorAll('rest')
       const title = mei.querySelector('title').textContent
       return title
+    },
+    sources: state => {
+      if (state.mei === null) {
+        return []
+      }
+      const mei = parser.parseFromString(state.mei, 'application/xml')
+      // const notes = mei.querySelectorAll('rest')
+      const elementsWithSourceAttribute = mei.querySelectorAll('*[source]')
+
+      const obj = {}
+      elementsWithSourceAttribute.forEach(elem => {
+        const sources = elem.getAttribute('source')
+        sources.split(' ').forEach(source => {
+          obj[source] = source
+        })
+      })
+
+      return Object.keys(obj)
     }
   },
   modules: {
