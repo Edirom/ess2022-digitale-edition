@@ -10,12 +10,19 @@ import { VerovioToolkit } from 'verovio/esm'
 
 const verovioOptions = {
   scale: 50,
-  // breaks: 'none',
+  breaks: 'encoded',
   openControlEvents: true,
   svgBoundingBoxes: true,
+  svgViewBox: true,
   svgRemoveXlink: true,
   header: 'none',
-  footer: 'none'
+  footer: 'none',
+  appXPathQuery: './rdg[contains(@source, "#jakob")]',
+  choiceXPathQuery: './orig',
+  svgAdditionalAttribute: [
+    'note@pname',
+    'note@oct'
+  ]
 }
 
 export default {
@@ -27,6 +34,11 @@ export default {
 
       if (this.$store.getters.meiLoaded) {
         verovioToolkit.loadData(this.$store.getters.meiAsText)
+
+        // attention: down there be dragons!
+        verovioToolkit.select({ measureRange: '3-5' })
+        verovioToolkit.redoLayout()
+
         const svg = verovioToolkit.renderToSVG(1, {})
         document.querySelector('#verovioViewer').innerHTML = svg
       }
@@ -36,11 +48,23 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
 @import '@/css/_variables.scss';
 #verovioViewer {
   width: 100%;
   height: 100%;
   overflow: auto;
+
+  svg {
+    g.app {
+      fill: lighten(red, 20%);
+      stroke: lighten(red, 20%);
+    }
+
+    g.note[data-pname="c"][data-oct="4"] {
+      fill: blue;
+      stroke: blue;
+    }
+  }
 }
 </style>
