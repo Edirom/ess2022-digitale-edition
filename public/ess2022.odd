@@ -26,7 +26,7 @@
         </title>
         <respStmt>
           <resp>Authored by</resp>
-          <name xml:id="PR">Perry Roland</name>
+          <name xml:id="ESS2022">Participants of the ESS 2022 Class on Digital Editions</name>
         </respStmt>
       </titleStmt>
       <publicationStmt>
@@ -37,11 +37,8 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <change n="1" when="2014-12-04" who="#PR">
-        <desc>Creation of the initial ODD.</desc>
-      </change>
-      <change n="2" when="2022-09-09" type="meigarage">
-        <desc>ODD modified online with https://meigarage.edirom.de</desc>
+      <change n="1" when="2022-09-09" who="#ESS2022" type="meigarage">
+        <desc>ODD generated online with https://meigarage.edirom.de</desc>
       </change>
     </revisionDesc>
   </teiHeader>
@@ -51,7 +48,7 @@
     </front>
     <body>
       <!-- Limit the set of possible start elements -->
-      <schemaSpec ident="mei" ns="http://www.music-encoding.org/ns/mei" prefix="mei_" start="mei meiHead meiCorpus music">
+      <schemaSpec ident="mei" ns="http://www.music-encoding.org/ns/mei" prefix="mei_" start="mei">
         <!-- Declare MEI and XLink namespaces for use in Schematron -->
         <constraintSpec ident="set_ns" scheme="isoschematron" mode="add">
           <constraint>
@@ -62,7 +59,7 @@
         <!-- Include all modules -->
         <moduleRef key="MEI"/>
         <moduleRef key="MEI.cmn"/>
-        <moduleRef key="MEI.critapp" except=" lem"/>
+        <moduleRef key="MEI.critapp" except="lem"/>
         <moduleRef key="MEI.edittrans" except="damage abbr cpMark handShift metaMark"/>
         <moduleRef key="MEI.facsimile"/>
         <moduleRef key="MEI.frbr"/>
@@ -91,6 +88,33 @@
         <classSpec type="atts" ident="att.visualOffset.to" mode="delete"/>
         <classSpec type="atts" ident="att.xy" mode="delete"/>
         <classSpec type="atts" ident="att.duration.gestural" mode="delete"/>
+        
+        <!-- model for new schematron rule -->
+        <elementSpec ident="mdiv" module="MEI.shared" mode="change">
+          <constraintSpec ident="mdiv_constraints" scheme="isoschematron" mode="add">
+            <constraint>
+              <sch:rule context="mei:mdiv">
+                <sch:assert role="error" test="@xml:id and string-length(@xml:id) gt 5">Every mdiv element needs an @xml:id, and it needs to have a sufficient length. You should use UUIDs!</sch:assert>                                
+              </sch:rule>
+            </constraint>
+          </constraintSpec>        
+        </elementSpec>
+        
+        <elementSpec ident="syl" module="MEI.shared" mode="change">
+          <constraintSpec ident="syl_constraints" scheme="isoschematron" mode="add">
+            <constraint>
+              <sch:rule context="mei:syl">
+                <sch:assert role="error" test="not(@wordpos='t') or (not(@con) or @con = 'u')">
+                  syl elements with @wordpos="t" must not have an attribute @con, except for @con="u".
+                </sch:assert>
+                <sch:assert role="error" test="not(@wordpos = ('i','m')) or @con">
+                  syl elements with @wordpos="i" or ="m" need to have a @con attribute.
+                </sch:assert>     
+              </sch:rule>
+            </constraint>
+          </constraintSpec>        
+        </elementSpec>
+        
       </schemaSpec>
     </body>
   </text>
